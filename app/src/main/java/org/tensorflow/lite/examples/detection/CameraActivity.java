@@ -241,6 +241,13 @@ public abstract class CameraActivity extends AppCompatActivity implements OnImag
             startActivity(intent);
 
           }
+          else if (string.equals("denomination") || string.equals("how much am i holding") || string.equals("identify") )
+          {
+            Toast.makeText(getBaseContext(), "Denomination Module", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(CameraActivity.this, org.tensorflow.lite.examples.classification.CameraActivity.class);
+            startActivity(intent);
+
+          }
           else if (string.equals("stop"))
           {
             Intent homeIntent = new Intent(Intent.ACTION_MAIN);

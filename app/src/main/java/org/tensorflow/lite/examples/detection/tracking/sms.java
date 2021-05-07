@@ -311,8 +311,8 @@ public class sms extends AppCompatActivity implements GoogleApiClient.Connection
 
 
             //To move to CameraActivity
-            Intent intent = new Intent(this,CameraActivity.class);
-            startActivity(intent);
+            //Intent intent = new Intent(this,CameraActivity.class);
+            //startActivity(intent);
 
 
 
