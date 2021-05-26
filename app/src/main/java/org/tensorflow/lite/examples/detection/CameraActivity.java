@@ -206,7 +206,7 @@ public abstract class CameraActivity extends AppCompatActivity implements OnImag
             navigate();
             take_command();
           }
-          else if(string.equals("stop navigation"))
+          else if(string.equals("stop navigation") )
           {
             setContentView(R.layout.activity_main);
             take_command();
@@ -239,15 +239,17 @@ public abstract class CameraActivity extends AppCompatActivity implements OnImag
             Toast.makeText(getBaseContext(), "Emergency Module", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(CameraActivity.this,sms.class);
             startActivity(intent);
+            take_command();
 
           }
           else if (string.equals("denomination") || string.equals("how much am i holding") || string.equals("identify") )
           {
             Toast.makeText(getBaseContext(), "Denomination Module", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(CameraActivity.this, org.tensorflow.lite.examples.classification.CameraActivity.class);
+            Intent intent = new Intent(CameraActivity.this, org.tensorflow.lite.examples.classification.CameraActivityDenom.class);
             startActivity(intent);
-
+            take_command();
           }
+
           else if (string.equals("stop"))
           {
             Intent homeIntent = new Intent(Intent.ACTION_MAIN);

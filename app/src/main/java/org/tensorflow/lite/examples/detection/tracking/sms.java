@@ -118,6 +118,8 @@ public class sms extends AppCompatActivity implements GoogleApiClient.Connection
 
 
 
+
+
     }
     @Override
     public void onConnected(Bundle bundle) {
@@ -308,11 +310,12 @@ public class sms extends AppCompatActivity implements GoogleApiClient.Connection
 
             textToSpeech.speak("Your Address has been sent to your emergency contacts. Help is on it's way.", TextToSpeech.QUEUE_FLUSH, null, null);
             Toast.makeText(this,"Sent",Toast.LENGTH_SHORT).show();
+            
+
 
 
             //To move to CameraActivity
-            //Intent intent = new Intent(this,CameraActivity.class);
-            //startActivity(intent);
+            finish();
 
 
 
