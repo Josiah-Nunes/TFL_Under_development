@@ -29,6 +29,7 @@ import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.RectF;
 import android.graphics.SurfaceTexture;
+import android.graphics.drawable.Drawable;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCaptureSession;
 import android.hardware.camera2.CameraCharacteristics;
@@ -185,6 +186,7 @@ public class CameraConnectionFragment extends Fragment {
         @Override
         public void onSurfaceTextureUpdated(final SurfaceTexture texture) {}
       };
+  private Drawable.Callback linearLayout;
 
   private CameraConnectionFragment(
       final ConnectionCallback connectionCallback,
@@ -274,8 +276,8 @@ public class CameraConnectionFragment extends Fragment {
   }
 
   @Override
-  public View onCreateView(
-      final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
+  public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState)
+  {
     return inflater.inflate(layout, container, false);
   }
 

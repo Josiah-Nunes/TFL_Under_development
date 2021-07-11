@@ -5,7 +5,6 @@
 
     <uses-sdk />
 
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
@@ -24,28 +23,42 @@
         android:label="@string/tfe_od_app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        tools:node="replace"
-        android:theme="@style/AppTheme.ObjectDetection">
+        android:theme="@style/AppTheme.ObjectDetection"
+        tools:node="replace">
+        <activity android:name=".Needs" />
 
-        <meta-data
-            android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+        <activity android:name=".sms"/>
 
-        <activity android:name=".tracking.sms"
-            android:parentActivityName=".CameraActivity"/>
-        <activity android:name=".CameraActivity" />
-        <activity android:name="org.tensorflow.lite.examples.classification.CameraActivityDenom"
-            android:parentActivityName=".CameraActivity" />
         <activity
-            android:name=".DetectorActivity"
-            android:label="@string/tfe_od_app_name"
-            android:screenOrientation="portrait">
+            android:name=".Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+
+        <activity android:name=".CameraActivity" />
+        <activity
+            android:name="org.tensorflow.lite.examples.classification.CameraActivityDenom"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DetectorActivity"
+            android:label="@string/tfe_od_app_name"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,23 @@
 <resources>
-    <string name="tfe_od_app_name" translation_description="Object Detection demo app [CHAR_LIMIT=40]">TFL Detect</string>
+    <string name="tfe_od_app_name" translation_description="Object Detection demo app [CHAR_LIMIT=40]">Vision</string>
     <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+
+    <string name="app_name">Vision</string>
+
+    //Splash Activity
+    <string name="welcome">VISION</string>
+    <string name="voiceAss">Your Personnel Voice Assistant</string>
+
+    //Needs Activity
+    <string name="greet">Please fill in the details so i can Assist You</string>
+    <string name="button">Submit</string>
+    <string name="name">What Should i call you ?</string>
+    <string name="Contact">Contact Number</string>
+    <string name="emer1">Emergency Contact 1</string>
+    <string name="emer2">Emergency Contact 2</string>
+
+    //Instructions
+    <string name="Instructions">Instructions For Vision</string>
+
+
 </resources>

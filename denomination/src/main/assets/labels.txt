@@ -1,20 +1,11 @@
-100_new_back
-100_new_front
-100_old_back
-100_old_front
-10_new_back
-10_new_front
-10_old_back
-10_old_front
-2000_back
-2000_front
-200_back
-200_front
-20_old_back
-20_old_front
-500_new_back
-500_new_front
-50_new_back
-50_new_front
-50_old_back
-50_old_front
+0 10 new
+1 10 old
+2 20
+3 50 new
+4 50 old
+5 100 new 
+6 100 old
+7 200
+8 500
+9 2000
+10 monopoly

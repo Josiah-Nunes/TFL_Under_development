@@ -11,12 +11,15 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-==============================================================================*/
+*/
 
 package org.tensorflow.lite.examples.detection.customview;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
 import java.util.LinkedList;
@@ -38,6 +41,18 @@ public class OverlayView extends View {
   public synchronized void draw(final Canvas canvas) {
     for (final DrawCallback callback : callbacks) {
       callback.drawCallback(canvas);
+
+      Paint paint = new Paint();
+      paint.setColor(Color.GREEN);
+      paint.setStyle(Paint.Style.STROKE);
+      paint.setStrokeWidth(6);
+      Rect rect_left = new Rect(0, 0, 350, 1440);
+      Rect rect_middle = new Rect(350, 0,750 , 1440);
+      Rect rect_right = new Rect(750, 0,1075 , 1440);
+
+      canvas.drawRect(rect_left, paint );
+      canvas.drawRect(rect_middle, paint );
+      canvas.drawRect(rect_right, paint );
     }
   }
 

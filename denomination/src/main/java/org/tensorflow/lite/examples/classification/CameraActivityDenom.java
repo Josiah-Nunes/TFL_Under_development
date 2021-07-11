@@ -559,7 +559,8 @@ public class CameraActivityDenom extends AppCompatActivity implements OnImageAva
 
           // the final result will be displayed from here.
           String s1=recognition.getTitle();
-          if(s1.equals("100_new_back") || s1.equals("100_new_front") ||s1.equals("100_old_back") ||s1.equals("100_old_back") )
+          //System.out.println(s1);
+          if(s1.equals("5 100 new") || s1.equals("6 100 old"))
           {
             FinalView.setText("₹100");
             final MediaPlayer mp100 = MediaPlayer.create(this,R.raw.a100);
@@ -574,7 +575,8 @@ public class CameraActivityDenom extends AppCompatActivity implements OnImageAva
 
 
           }
-          else if(s1.equals("10_new_back") || s1.equals("10_new_front") ||s1.equals("10_old_back") ||s1.equals("10_old_back") )
+
+          else if(s1.equals("0 10 new") || s1.equals("1 10 old")  )
           {
             FinalView.setText("₹10");
             final MediaPlayer mp10 = MediaPlayer.create(this,R.raw.a10);
@@ -587,7 +589,7 @@ public class CameraActivityDenom extends AppCompatActivity implements OnImageAva
             });
 
           }
-          else if(s1.equals("2000_back") ||s1.equals("2000_front"))
+          else if(s1.equals("9 2000"))
           {
             FinalView.setText("₹2000");
             TextView tv = findViewById(R.id.Final);
@@ -601,7 +603,7 @@ public class CameraActivityDenom extends AppCompatActivity implements OnImageAva
             });
 
           }
-          else if(s1.equals("200_back") ||s1.equals("200_front"))
+          else if(s1.equals("7 200"))
           {
             FinalView.setText("₹200");
             TextView tv = findViewById(R.id.Final);
@@ -614,7 +616,7 @@ public class CameraActivityDenom extends AppCompatActivity implements OnImageAva
             });
 
           }
-          else if(s1.equals("20_old_back") ||s1.equals("20_old_front" ))
+          else if(s1.equals("2 20"))
           {
             FinalView.setText("₹20");
             TextView tv = findViewById(R.id.Final);
@@ -627,7 +629,7 @@ public class CameraActivityDenom extends AppCompatActivity implements OnImageAva
             });
 
           }
-          else if(s1.equals("500_new_back") ||s1.equals("500_new_front"))
+          else if(s1.equals("8 500"))
           {
             FinalView.setText("₹500");
             ///# RIP 500 old :-P
@@ -640,7 +642,7 @@ public class CameraActivityDenom extends AppCompatActivity implements OnImageAva
               }
             });
           }
-          else if(s1.equals("50_new_back") || s1.equals("50_new_front") ||s1.equals("50_old_back") ||s1.equals("50_old_back") )
+          else if(s1.equals("3 50 new") || s1.equals("4 50 old") )
           {
             FinalView.setText("₹50");
             TextView tv = findViewById(R.id.Final);
@@ -652,6 +654,18 @@ public class CameraActivityDenom extends AppCompatActivity implements OnImageAva
               }
             });
 
+          }
+          if (s1.equals("10 monopoly"))
+          {
+            FinalView.setText("Invalid");
+            final MediaPlayer mpm10 = MediaPlayer.create(this, R.raw.monopoly);
+            TextView tv = findViewById(R.id.Final);
+            tv.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                mpm10.start();
+              }
+            });
           }
           // FinalView.setText(recognition.getTitle());
 
