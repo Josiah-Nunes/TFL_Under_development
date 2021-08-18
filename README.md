@@ -157,4 +157,4 @@ The user will be directed to google maps to track the current location of the vi
 impaired user. With the assistance of google maps the time required to locate the
 visually impaired individual is reduced.
 
-
+*****
