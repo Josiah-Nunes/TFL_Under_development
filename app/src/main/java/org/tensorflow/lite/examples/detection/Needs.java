@@ -212,7 +212,6 @@ public class Needs extends AppCompatActivity
                             eme2=0;
                             emergency_number2();
                         }
-
                     }
 
 
@@ -230,7 +229,7 @@ public class Needs extends AppCompatActivity
                                     public void run() {
                                         textToSpeech.speak("is your name "+ai, TextToSpeech.QUEUE_FLUSH, null, null);
                                         try {
-                                            Thread.sleep(2000);
+                                            Thread.sleep(1200);
                                         } catch (InterruptedException e) {
                                             e.printStackTrace();
                                         }
@@ -355,7 +354,6 @@ public class Needs extends AppCompatActivity
                         }).start();
 
                     }
-
                 }
             }
 
@@ -420,7 +418,7 @@ public class Needs extends AppCompatActivity
         }
         textToSpeech.speak("Tell me your name", TextToSpeech.QUEUE_FLUSH, null, null);
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1200);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -432,13 +430,13 @@ public class Needs extends AppCompatActivity
     {
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1200);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         textToSpeech.speak("Tell me your phone number", TextToSpeech.QUEUE_FLUSH, null, null);
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1200);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -451,13 +449,13 @@ public class Needs extends AppCompatActivity
     {
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1200);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         textToSpeech.speak("Tell me your emergency contact", TextToSpeech.QUEUE_FLUSH, null, null);
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1800);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -470,13 +468,13 @@ public class Needs extends AppCompatActivity
     {
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1200);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         textToSpeech.speak("Tell me another emergency contact", TextToSpeech.QUEUE_FLUSH, null, null);
         try {
-            Thread.sleep(2000);
+            Thread.sleep(2250);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

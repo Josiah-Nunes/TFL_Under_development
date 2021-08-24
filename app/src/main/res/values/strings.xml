@@ -6,7 +6,7 @@
 
     //Splash Activity
     <string name="welcome">VISION</string>
-    <string name="voiceAss">Your Personnel Voice Assistant</string>
+    <string name="voiceAss">Your Personal Voice Assistant</string>
 
     //Needs Activity
     <string name="greet">Please fill in the details so i can Assist You</string>

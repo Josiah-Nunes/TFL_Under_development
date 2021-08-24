@@ -14,9 +14,8 @@
          * limitations under the License.
          */
 
-        package org.tensorflow.lite.examples.detection;
-
-        import android.graphics.Bitmap;
+package org.tensorflow.lite.examples.detection;
+import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -49,6 +48,7 @@ import java.util.List;
  * An activity that uses a TensorFlowMultiBoxDetector and ObjectTracker to detect and then track
  * objects.
  */
+
 public class DetectorActivity extends CameraActivity implements OnImageAvailableListener {
   private static final Logger LOGGER = new Logger();
 
@@ -225,21 +225,19 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                       Detector.Recognition sloc = results.get(1);
                       RectF twoloc = sloc.getLocation();
 
-                      String s1= rloc.getTitle();
-
                       if(oneloc.top>=136f && oneloc.bottom<=357f || oneloc.top<=136f && oneloc.bottom>=357f )
                       {
                           System.out.println("SSSTTTTTTOOOOOOOOOPPPPPPPPP");
 
-                          textToSpeech.speak("stop "+s1+" in front", TextToSpeech.QUEUE_FLUSH, null, null);
+                          textToSpeech.speak("stop", TextToSpeech.QUEUE_FLUSH, null, null);
                           try {
-                              Thread.sleep(1200);
+                              Thread.sleep(700);
                           } catch (InterruptedException e) {
                               e.printStackTrace();
                           }
                       }
-                      else if (oneloc.top>=150f) {
-
+                      else if (oneloc.top>=150f)
+                      {
                           if (twoloc.bottom<=150f)
                           {
                               System.out.println("STOP");
@@ -283,7 +281,6 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                               }
                           }
                       }
-
                   }
                 }
 
@@ -304,9 +301,6 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                         });
               }
             }
-
-
-
     );
   }
 

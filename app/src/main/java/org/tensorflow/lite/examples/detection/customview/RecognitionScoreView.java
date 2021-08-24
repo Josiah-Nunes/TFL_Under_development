@@ -21,8 +21,10 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
-import java.util.List;
+
 import org.tensorflow.lite.examples.detection.tflite.Detector.Recognition;
+
+import java.util.List;
 
 public class RecognitionScoreView extends View implements ResultsView {
   private static final float TEXT_SIZE_DIP = 14;
@@ -31,7 +33,8 @@ public class RecognitionScoreView extends View implements ResultsView {
   private final Paint bgPaint;
   private List<Recognition> results;
 
-  public RecognitionScoreView(final Context context, final AttributeSet set) {
+  public RecognitionScoreView(final Context context, final AttributeSet set)
+  {
     super(context, set);
 
     textSizePx =

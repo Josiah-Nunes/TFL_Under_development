@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity
     public static final Integer RecordAudioRequestCode = 1;
     private TextToSpeech textToSpeech;
 
-
     private SpeechRecognizer speechRecognizer;
     AlertDialog.Builder alertSpeechDialog;
     AlertDialog alertDialog;
@@ -228,17 +227,6 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
-    private void After_sms_command() {
-        textToSpeech.speak("Your current location has been sent to your emergency contacts. Help is on it's way. ", TextToSpeech.QUEUE_FLUSH, null, null);
-        try {
-            Thread.sleep(6000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        take_command();
-    }
-
-
     //Function to take command again
     public void take_command()
     {
@@ -259,7 +247,27 @@ public class MainActivity extends AppCompatActivity
     //Instructions button
     public void Instructions()
     {
+        new Thread(new Runnable() {
+            public void run() {
+                // a potentially time consuming task
+                editText.post(new Runnable() {
+                    public void run() {
+                        welcome = "The app has a microphone button in the middle of your phone screen. " +
+                                "On pressing say the following commands based on your needs. " +
+                                "Say Open Navigation for obstacle detection. " +
+                                "Say identify to validate the cash note in your hand. " +
+                                "Say help in case of emergency.";
 
+                        textToSpeech.speak(welcome, TextToSpeech.QUEUE_FLUSH, null, null);
+                        try {
+                            Thread.sleep(20000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+            }
+        }).start();
 
     }
 
